@@ -1,0 +1,50 @@
+# MAC FILE SYSTEM
+.DS_Store
+
+# Swift Package Manager
+/.build
+/Packages
+
+# XCODE
+*/build/*
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+profile
+*.moved-aside
+DerivedData
+.idea/
+*.hmap
+*.xccheckout
+*.ipa
+*.xcuserstate
+
+# Build Artifacts
+*.ipa
+*.dSYM.zip
+
+# COCOAPODS
+/Pods
+
+# Carthage
+/Carthage
+
+# FASTLANE
+fastlane/report.xml
+fastlane/screenshots
+Preview.html
+fastlane/metadata copy
+fastlane/SnapshotHelper.swift
+
+# APP SIGNING
+*.cer
+*.p12
+*.certSigningRequest
+*.mobileprovision
+
