@@ -20,9 +20,12 @@ class ProductsCollectionViewDelegate: NSObject, UICollectionViewDelegate, UIColl
     
     /// Determines the left and right insets for the section based on the number of items in the row.
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        print("-------------------- begin calculating inset -------------------------")
         
         let screenWidth = UIScreen.main.bounds.width
         let viewWidth = screenWidth - collectionView.safeAreaInsets.left - collectionView.safeAreaInsets.right
+        print("Screen width: \(screenWidth)")
+        print("View width: \(viewWidth)")
         
         // get cell width
         let cell = ProductCollectionViewCell(frame: CGRect.zero)
@@ -36,7 +39,8 @@ class ProductsCollectionViewDelegate: NSObject, UICollectionViewDelegate, UIColl
         if ((numberOfCellsThatFitInRow - 1) * interItemSpacing) + (numberOfCellsThatFitInRow * cellWidth) > viewWidth {
             numberOfCellsThatFitInRow = numberOfCellsThatFitInRow - 1
         }
-
+        print("Number of cells that will fit in a row: \(numberOfCellsThatFitInRow)")
+        
         // If provided a number of cells that should be in a row is provided
         // we use the smallest value between how many items fit in a row and
         // the number provided.
@@ -47,10 +51,21 @@ class ProductsCollectionViewDelegate: NSObject, UICollectionViewDelegate, UIColl
         } else {
             cellsInRow = numberOfCellsThatFitInRow
         }
+        print("Final number of cells in row: \(cellsInRow)")
         
         let totalCellWidth = cellsInRow * cellWidth
         let totalSpaceWidth = (cellsInRow - 1.0) * interItemSpacing
         let inset = (viewWidth - totalCellWidth - totalSpaceWidth) / 2.0
+        
+        print("Total cell width: \(totalCellWidth)")
+        print("Total space width: \(totalSpaceWidth)")
+        print("Inset: \(inset)")
+        
+        print("total cell width + total space width + 2(inset) = total view width")
+        print("\(totalCellWidth) + \(totalSpaceWidth) + \(inset * 2.0) = \(viewWidth)")
+        print("\(totalCellWidth + totalSpaceWidth + (inset * 2.0)) = \(viewWidth)")
+        
+        print("-------------------- end calculating inset -------------------------")
         
         return UIEdgeInsets(top: 0, left: inset, bottom: 0, right: inset)
     }
