@@ -8,12 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		1612ECA9210AB90000121EA9 /* BrickAndMortar.h in Headers */ = {isa = PBXBuildFile; fileRef = 1612ECA7210AB90000121EA9 /* BrickAndMortar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1612ED12210AC2F600121EA9 /* ProductsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1612ED11210AC2F600121EA9 /* ProductsCollectionViewController.swift */; };
+		1612ED15210AC34F00121EA9 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1612ED14210AC34F00121EA9 /* ProductCollectionViewCell.swift */; };
+		1628742C210E4F88007BC2CC /* ProductsCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1628742B210E4F88007BC2CC /* ProductsCollectionViewDelegate.swift */; };
+		16F4EB7F210D2B9F003A7DE2 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F4EB7E210D2B9F003A7DE2 /* Product.swift */; };
+		16F4EB82210D2C11003A7DE2 /* ProductsUICollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F4EB81210D2C11003A7DE2 /* ProductsUICollectionViewDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1612ECA4210AB90000121EA9 /* BrickAndMortar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BrickAndMortar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1612ECA7210AB90000121EA9 /* BrickAndMortar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BrickAndMortar.h; sourceTree = "<group>"; };
 		1612ECA8210AB90000121EA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1612ED11210AC2F600121EA9 /* ProductsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsCollectionViewController.swift; sourceTree = "<group>"; };
+		1612ED14210AC34F00121EA9 /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
+		1628742B210E4F88007BC2CC /* ProductsCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsCollectionViewDelegate.swift; sourceTree = "<group>"; };
+		16F4EB7E210D2B9F003A7DE2 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		16F4EB81210D2C11003A7DE2 /* ProductsUICollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsUICollectionViewDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,8 +58,29 @@
 			children = (
 				1612ECA7210AB90000121EA9 /* BrickAndMortar.h */,
 				1612ECA8210AB90000121EA9 /* Info.plist */,
+				16F4EB80210D2BA6003A7DE2 /* Models */,
+				1612ED13210AC30F00121EA9 /* Products */,
 			);
 			path = BrickAndMortar;
+			sourceTree = "<group>";
+		};
+		1612ED13210AC30F00121EA9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1612ED11210AC2F600121EA9 /* ProductsCollectionViewController.swift */,
+				1612ED14210AC34F00121EA9 /* ProductCollectionViewCell.swift */,
+				16F4EB81210D2C11003A7DE2 /* ProductsUICollectionViewDataSource.swift */,
+				1628742B210E4F88007BC2CC /* ProductsCollectionViewDelegate.swift */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		16F4EB80210D2BA6003A7DE2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				16F4EB7E210D2B9F003A7DE2 /* Product.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,6 +126,7 @@
 				TargetAttributes = {
 					1612ECA3210AB90000121EA9 = {
 						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 0940;
 					};
 				};
 			};
@@ -130,6 +162,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1612ED12210AC2F600121EA9 /* ProductsCollectionViewController.swift in Sources */,
+				16F4EB7F210D2B9F003A7DE2 /* Product.swift in Sources */,
+				1612ED15210AC34F00121EA9 /* ProductCollectionViewCell.swift in Sources */,
+				16F4EB82210D2C11003A7DE2 /* ProductsUICollectionViewDataSource.swift in Sources */,
+				1628742C210E4F88007BC2CC /* ProductsCollectionViewDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +296,7 @@
 		1612ECAD210AB90000121EA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -276,6 +314,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.code-bits.BrickAndMortar";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -284,6 +323,7 @@
 		1612ECAE210AB90000121EA9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
