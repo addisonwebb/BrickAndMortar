@@ -30,6 +30,10 @@ public class ProductCollectionViewCell: UICollectionViewCell {
         NSLayoutConstraint.activate([
             contentView.widthAnchor.constraint(equalToConstant: 200.0),
             contentView.heightAnchor.constraint(equalToConstant: 300.0),
+            contentView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            contentView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            contentView.topAnchor.constraint(equalTo: topAnchor),
+            contentView.bottomAnchor.constraint(equalTo: bottomAnchor),
             nameLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
             nameLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
         ])
